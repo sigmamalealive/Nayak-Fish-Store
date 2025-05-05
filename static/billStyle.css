@@ -1,0 +1,239 @@
+/* Basic styling for the bill system */
+
+.bill-generation-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .bill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .customer-info {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: inline-block;
+    width: 150px;
+  }
+  
+  .fish-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .fish-items-table th, .fish-items-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .fish-items-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .fish-items-table input, .fish-items-table select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .remove-item-btn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .bill-summary, .payment-section {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .summary-row.total {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  .bill-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .bill-actions button {
+    padding: 10px 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .bill-actions button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  #bill-preview {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: white;
+  }
+  
+  .final-bill {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .bill-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .bill-items th, .bill-items td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .bill-totals {
+    margin-top: 20px;
+    width: 300px;
+    float: right;
+  }
+  
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  
+  .grand-total {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #333;
+  }
+  
+  .bill-footer {
+    clear: both;
+    margin-top: 40px;
+    text-align: center;
+    font-style: italic;
+    color: #666;
+  }
+
+  /* Add to your existing CSS */
+.bill-search-section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.search-filters .form-group {
+  margin-bottom: 0;
+}
+
+#search-bills-btn {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#search-bills-btn:hover {
+  background-color: #45a049;
+}
+
+.bills-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.bills-list-table th, .bills-list-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.bills-list-table th {
+  background-color: #f2f2f2;
+}
+
+.bills-list-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.bills-list-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.view-bill-btn, .print-bill-btn {
+  padding: 5px 10px;
+  margin: 0 2px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.view-bill-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.print-bill-btn {
+  background-color: #ff9800;
+  color: white;
+}
+
+.view-bill-btn:hover {
+  background-color: #0b7dda;
+}
+
+.print-bill-btn:hover {
+  background-color: #e68a00;
+}

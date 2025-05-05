@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventory - Nayak Fisheries</title>
+  <link rel="stylesheet" href="./static/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Add this below your summary cards -->
+    <div class="sales-card">
+        <h2>Sales Management</h2>
+        <div class="sales-options">
+        <button id="viewSalesBtn" class="sales-btn" onclick="window.location.href='/salesChart'">📋 View Sales History</button>
+        <button id="addSalesBtn" class="sales-btn">➕ Add New Sale</button>
+        <button id="stockBtn" class="sales-btn">📊 Current Stock</button>
+        <button id="resetStockBtn" class="sales-btn danger">🔄 Reset Stock</button>
+        </div>
+        
+        <!-- Dynamic content will load here -->
+        <div id="salesContent"></div>
+    </div>
+  <script src="./static/sales.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

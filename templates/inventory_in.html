@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventory IN - Nayak Fisheries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Inventory IN Entry</h1>
+    <div class="section">
+      <label>Date</label>
+      <input type="date" id="date" required>
+      
+      <label>Fish Type</label>
+      <input type="text" id="fishType" required>
+      
+      <label>Number of Trays</label>
+      <input type="number" id="trays" required>
+      
+      <label>Supplier Name</label>
+      <input type="text" id="supplierName" required>
+      
+      <label>Supplier Contact</label>
+      <input type="tel" id="supplierContact" required>
+      
+      <label>Purchase Price (₹)</label>
+      <input type="number" id="price" required>
+
+      <button onclick="saveInventory()">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    function saveInventory() {
+      const entry = {
+        date: document.getElementById("date").value,
+        fishType: document.getElementById("fishType").value,
+        trays: document.getElementById("trays").value,
+        supplierName: document.getElementById("supplierName").value,
+        supplierContact: document.getElementById("supplierContact").value,
+        price: document.getElementById("price").value,
+        type: 'IN'
+      };
+
+      let inventory = JSON.parse(localStorage.getItem("inventoryRecords")) || [];
+      inventory.push(entry);
+      localStorage.setItem("inventoryRecords", JSON.stringify(inventory));
+      
+      window.location.href = "inventory_list.html";
+    }
+  </script>
+</body>
+</html>

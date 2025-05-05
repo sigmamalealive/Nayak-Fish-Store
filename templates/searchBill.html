@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayak Fisheries</title>
+    <link rel="stylesheet" href="./static/billStyle.css">
+</head>
+<body>
+    
+      <div id="fish-items-body" hidden></div>  
+      <div id="add-item-btn"></div>
+      <div id="generate-bill-btn"></div>
+      <div id="print-bill-btn"></div>
+      <div id="save-bill-btn"></div>
+
+      <!-- Add this section to your HTML -->
+      <div class="bill-search-section">
+        <h2>Search Bills</h2>
+        <div class="search-filters">
+            <div class="form-group">
+            <label for="search-name">Customer Name:</label>
+            <input type="text" id="search-name" placeholder="Enter customer name">
+            </div>
+            <div class="form-group">
+            <label for="search-phone">Phone Number:</label>
+            <input type="text" id="search-phone" placeholder="Enter phone number">
+            </div>
+            <button id="search-bills-btn">Search Bills</button>
+        </div>
+        
+        <div class="search-results">
+            <table class="bills-list-table">
+            <thead>
+                <tr>
+                <th>Bill ID</th>
+                <th>Date</th>
+                <th>Customer</th>
+                <th>Phone</th>
+                <th>Total Amount</th>
+                <th>Balance Due</th>
+                <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="bills-list-body">
+                <!-- Bills will be loaded here -->
+            </tbody>
+            </table>
+        </div>
+        </div>
+        <!-- Bill Preview Section -->
+      <div class="bill-preview" id="bill-preview">
+        <!-- Final bill will be rendered here -->
+      </div>
+      <script src="./static/bill.js"></script>
+</body>
+</html>

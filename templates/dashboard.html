@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nayak Fish Store Dashboard</title>
+  <link rel="stylesheet" href="./static/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>NAYAK FISH STORE</h1>
+    <div class="grid">
+      <div class="card" onclick="window.location.href='/finance'">
+        <i data-lucide="wallet"></i>
+        <span>Finance</span>
+      </div>
+      <div class="card" onclick="goTo('sales')">
+        <i data-lucide="shopping-cart"></i>
+        <span>Sales</span>
+      </div>
+      <div class="card" onclick="goTo('advance_order')">
+        <i data-lucide="calendar-clock"></i>
+        <span>Advance Orders</span>
+      </div>
+      <div class="card" onclick="goTo('inventoryy')">
+        <i data-lucide="package"></i>
+        <span>Inventory</span>
+      </div>
+      <div class="card" onclick="goTo('bill')">
+        <i data-lucide="book"></i>
+        <span>Bill</span>
+      </div>
+    </div>
+  </div>
+  <script src="./static/script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

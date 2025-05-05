@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+    <link rel="stylesheet" href="./static/billStyle.css">
+</head>
+<body>
+    <div class="bill-generation-container">
+        <h2>Generate New Bill</h2>
+        
+        <!-- Bill Header -->
+        <div class="bill-header">
+          <div class="business-info">
+            <h3>Nayak Fish Store</h3>
+            <p>Barikpur , Bhadrak, Odisha</p>
+            <p>Phone: +91 6372663125</p>
+          </div>
+          <div class="bill-date">
+            <label for="bill-date">Date:</label>
+            <input type="date" id="bill-date" value="<?php echo date('Y-m-d'); ?>">
+          </div>
+        </div>
+        
+        <!-- Customer Information -->
+        <div class="customer-info">
+          <h4>Customer Details</h4>
+          <div class="form-group">
+            <label for="customer-name">Name:</label>
+            <input type="text" id="customer-name" placeholder="Enter customer name">
+          </div>
+          <div class="form-group">
+            <label for="customer-phone">Phone:</label>
+            <input type="text" id="customer-phone" placeholder="Enter phone number">
+          </div>
+        </div>
+        
+        <!-- Fish Items Table -->
+        <table class="fish-items-table">
+          <thead>
+            <tr>
+              <th>Fish Name</th>
+              <th>Quantity (kg)</th>
+              <th>Price per kg (₹)</th>
+              <th>Total (₹)</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="fish-items-body">
+            <!-- Rows will be added dynamically -->
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5">
+                <button id="add-item-btn">Add Fish Item</button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+        
+        
+        <!-- Bill Summary -->
+        <div class="bill-summary" id="bill-summary">
+          <h4>Bill Summary</h4>
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="subtotal">₹0.00</span>
+          </div>
+          <div class="form-group">
+            <label for="tax-amount">Tax Amount (%):</label>
+            <input type="number" id="tax-amount" min="0" step="0.01" value="0.00">
+          </div>
+          <div class="summary-row total">
+            <span>Total Amount:</span>
+            <span id="total-amount">₹0.00</span>
+          </div>
+        </div>
+        
+        <!-- Payment Section -->
+        <div class="payment-section">
+          <h4>Payment Details</h4>
+          <div class="form-group">
+            <label for="amount-paid">Amount Paid (₹):</label>
+            <input type="number" id="amount-paid" min="0" step="0.01">
+          </div>
+          <div class="form-group">
+            <label for="previous-balance">Previous Balance (₹):</label>
+            <input type="number" id="previous-balance" min="0" step="0.01" value="0.00">
+          </div>
+          <div class="summary-row">
+            <span>Balance Due:</span>
+            <span id="balance-due">₹0.00</span>
+          </div>
+        </div>
+        
+        <!-- Final Bill Actions -->
+        <div class="bill-actions">
+          <button id="generate-bill-btn">Generate Final Bill</button>
+          <button id="print-bill-btn" disabled>Print Bill</button>
+          <button id="save-bill-btn" disabled>Save Bill</button>
+        </div>
+      </div>
+      
+      <!-- Bill Preview Section -->
+      <div class="bill-preview" id="bill-preview">
+        <!-- Final bill will be rendered here -->
+      </div>
+
+      
+      <script src="./static/bill.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sales Dashboard - Nayak Fisheries</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Sales Dashboard</h1>
+    <div class="dashboard-nav">
+      <a href="/">Inventory Entry</a>
+      <a href="/inventory">View All Records</a>
+    </div>
+    
+    <!-- Summary Cards -->
+    <div class="summary-cards">
+      <div class="card">
+        <h3>Total Sales</h3>
+        <div class="value" id="total-sales">₹0</div>
+      </div>
+      <div class="card">
+        <h3>Total Purchases</h3>
+        <div class="value" id="total-purchases">₹0</div>
+      </div>
+      <div class="card">
+        <h3>Profit</h3>
+        <div class="value" id="profit">₹0</div>
+      </div>
+      <div class="card">
+        <h3>Transactions</h3>
+        <div class="value" id="total-transactions">0</div>
+      </div>
+    </div>
+    
+    <!-- Charts Section -->
+    <div class="chart-row">
+      <div class="chart-container">
+        <h2>Monthly Sales Trend</h2>
+        <canvas id="monthlyTrendChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <h2>Sales by Fish Type</h2>
+        <canvas id="fishTypeChart"></canvas>
+      </div>
+    </div>
+    
+    <!-- Recent Transactions Table -->
+    <div class="recent-transactions">
+      <h2>Recent Transactions</h2>
+      <table id="recentTransactions">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Fish Type</th>
+            <th>Qty</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="/static/sales.js"></script>
+</body>
+</html>

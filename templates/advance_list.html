@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advance Orders</title>
+  <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+
+  <label for="filterDate">Filter by Date:</label>
+  <input type="date" id="filterDate">
+  <button onclick="filterOrdersByDate()">Filter</button>
+  <button onclick="viewOrders()">Clear Filter</button>
+    <div class="section">
+      <button onclick="viewOrders()">View Orders</button>
+    </div>
+    
+    <div id="ordersList" class="section">
+      <!-- Orders will be displayed here -->
+    </div>
+ 
+
+  <script src="./static/advance_order.js"></script>
+</body>
+</html>
